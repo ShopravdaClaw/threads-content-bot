@@ -1,16 +1,22 @@
 # Threads Content Bot
 
-Generates several ready-to-post Threads options in Ukrainian using live Threads references, trend scraping, and style constraints aimed at human-sounding output.
+A Telegram-assisted content bot that scans Threads, collects live reference posts, and drafts Ukrainian post options that sound more human and less templated.
 
-## What it does
-- scrapes Threads search results in Ukrainian and English
-- extracts reference posts and style signals
-- generates post options with embedded context
-- rotates punchline mechanisms to reduce repetition
-- sends post options to Telegram
+## Features
+- searches Threads in Ukrainian and English
+- extracts reference posts and style signals from live search results
+- generates several post options with context embedded inside the post
+- rotates joke mechanics to avoid repeating the same punchline pattern
+- scores drafts before sending them to Telegram
+
+## Stack
+- Python 3
+- Playwright
+- OpenClaw agent runner
+- Telegram Bot API
 
 ## Setup
-1. Create `.env.threads-content` from `.env.threads-content.example`.
+1. Copy `.env.threads-content.example` to `.env.threads-content` and fill in your values.
 2. Install dependencies:
    ```bash
    python3 -m pip install playwright
@@ -20,7 +26,11 @@ Generates several ready-to-post Threads options in Ukrainian using live Threads 
    ```bash
    python3 bot.py
    ```
-4. Run daemon:
+4. Run the scheduler:
    ```bash
    python3 daemon.py
    ```
+
+## Notes
+- Secrets are not included in this repository.
+- Generated trend/state files are local runtime artifacts and should stay out of git.
