@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.pyo
+*.log
+*.pid
+*.lock
+.env*
+!.env*.example
+state/
+posts/
+assets/original/
+assets/prepared/
